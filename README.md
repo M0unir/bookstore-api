@@ -8,14 +8,16 @@ Express
 Angularjs
 
 #How to run
-1. Clone repo
-2. 
-```Shell
-npm install && bower install
-```
-3. 
-```Shell
-npm start
+Clone repo
+ ```
+ npm install && bower install
+ ```
+Install dependencies
+ ```
+ npm install && bower install
+ ```
+Run app
+```npm start
 ```
 
 #License
