@@ -1,0 +1,24 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "Simple Restful API for bookstore",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express":"*",
+    "body-parser":"*",
+    "mongoose":"*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M0unir/Bookstore.git"
+  },
+  "author": "Mounir",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/M0unir/Bookstore/issues"
+  },
+  "homepage": "https://github.com/M0unir/Bookstore#readme"
+}
