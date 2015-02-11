@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 
 // Models
 Genre = require('./models/genre');
+Book = require('./models/book');
 
 // Connecting to mongoose
 mongoose.connect('mongodb://localhost/booklibrary');
@@ -23,15 +24,37 @@ app.get('/contact', function (req, res) {
   res.send('Contact Page');
 });
 
-// Book API
+// BookStore API
+// GET genres
 app.get('/api/genres', function(req,res){
     Genre.getGenres(function(err, genres){
         if(err){
             throw err;
         }
         res.json(genres);
+    });
+});
+
+// GET books
+app.get('/api/books', function(req,res){
+    Book.getBooks(function(err, books){
+        if(err){
+            throw err;
+        }
+        res.json(books);
+    })
+});
+
+// GET a single book
+app.get('/api/books/:_id', function(req,res){
+    Book.getBookById(req.params._id, function( err, book){
+        if(err){
+            throw err;
+        }
+        res.json(book);
     })
 })
+
 
 app.listen(3000);
 console.log('Running on port 3000..');
