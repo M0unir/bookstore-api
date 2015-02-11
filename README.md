@@ -9,15 +9,16 @@ Angularjs
 
 #How to run
 Clone repo
- ```
+ ``` shell
  npm install && bower install
  ```
 Install dependencies
- ```
+ ``` shell
  npm install && bower install
  ```
 Run app
-```npm start
+```shell
+npm start
 ```
 
 #License
