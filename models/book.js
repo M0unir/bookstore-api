@@ -47,3 +47,31 @@ module.exports.getBooks = function(callback, limit ){
 module.exports.getBookById = function(id, callback){
     Book.findById(id, callback);
 }
+
+// POST book
+module.exports.addBook = function(book, callback ){
+    Book.create(book, callback);
+}
+
+// UPDATE book
+module.exports.updateBook = function(id, book, options, callback ){
+    var query = { _id: id };
+    var update = {
+        name: book.title,
+        genre: book.genre,
+        book: book.book,
+        description: book.description, 
+        author: book.author, 
+        publisher: book.publisher, 
+        pages: book.pages, 
+        image_url: book.image_url,
+        buy_url: book.buy_url
+    }
+    Book.findOneAndUpdate(query, update, options, callback);
+}
+
+// DELETE book
+module.exports.removeBook = function(id, callback){
+    query = {_id: id};
+    Book.remove(query, callback);
+}
