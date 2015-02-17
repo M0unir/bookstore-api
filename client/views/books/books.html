@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Books</h1>
+    <p>This is a list of books available. dsds</p>
+    <p><a class="btn btn-primary btn-lg" href="#/books/add">Add more</a></p>
+  </div>
+</div>
+<div class="row clearfix" ng-init="getBooks()">
+  <div ng-repeat="book in books">
+  <div class="col-sm-6 col-md-4 ">
+    <div class="thumbnail">
+      <img src="{{book.image_url}}" alt="{{book.title}}">
+      <div class="caption">
+        <h3>{{book.title}}</h3>
+        <p>{{book.description}}</p>
+        <p><a href="#/books/details/{{book._id}}" class="btn btn-primary" role="button">Details</a> <a href="{{book.buy_url}}" class="btn btn-default" role="button">Buy</a></p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
