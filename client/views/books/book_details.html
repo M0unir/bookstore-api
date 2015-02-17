@@ -1,0 +1,19 @@
+<a class="btn btn-default" href="#/books">Go Back</a>
+<div class="media" ng-init="getBook()">
+  <div class="media-left media-middle">
+    <a href="#">
+      <img class="media-object" src="{{book.image_url}}" alt="{{book.title}}">
+    </a>
+  </div>
+  <div class="media-body">
+    <h2 class="media-heading">{{book.title}}</h2>
+    <p>{{book.description}}</p>
+    <ul class="list-group">
+      <li class="list-group-item"><strong>Genre</strong>: {{book.genre}}</li>
+      <li class="list-group-item"><strong>author</strong>: {{book.author}}</li>
+      <li class="list-group-item"><strong>publisher</strong>: {{book.publisher}}</li>
+      <li class="list-group-item"><strong>pages</strong>: {{book.pages}}</li>
+      <br> <a class="btn btn-danger btn-lg" href="{{book.buy_url}}">Buy on Amazon</a>
+    </ul>
+  </div>
+</div>
