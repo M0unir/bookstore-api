@@ -1,0 +1,23 @@
+{
+  "name": "bookstore",
+  "homepage": "https://github.com/M0unir/Bookstore",
+  "authors": [
+    "M0unir <mounir.chouladi@gmail.com>"
+  ],
+  "description": "bookstore frontend",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.4.7",
+    "angular-route": "^1.5.8",
+    "bootstrap": "^3.3.7"
+  }
+}

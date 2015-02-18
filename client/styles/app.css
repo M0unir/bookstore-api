@@ -1,0 +1,10 @@
+.book {
+    margin-bottom: 1em;
+}
+.book img{
+    max-width: 200px;
+}
+
+.book .buy-book {
+    margin-left: 15px;
+}

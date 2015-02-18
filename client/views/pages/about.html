@@ -1,0 +1,52 @@
+<html ng-app="bookstore">
+
+<head>
+  <title>Bookstore API</title>
+  <link rel="stylesheet" href="styles/bootstrap-lumen.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/app.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="#">Bookstore API</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/books">Books</a></li>
+          <li class="dropdown">
+            <a href="/genres" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Genres <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Suspense</a></li>
+              <li><a href="#">Programming</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Account</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron">
+    <h1>About</h1>
+    <p>This is a Bookstore API</p>
+    <p><a class="btn btn-primary btn-lg" href="github.com">Github Project</a></p>
+  </div>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers/books.js"></script>
+  <script src="controllers/genres.js"></script>
+</body>
+
+</html>
