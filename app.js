@@ -1,8 +1,12 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
+// console.log(path);
+// console.log(path.join(__dirname, '/client'));
+app.use(express.static( path.join(__dirname, 'client') ));
 app.use(bodyParser.json());
 
 // Models
@@ -13,9 +17,9 @@ Book = require('./models/book');
 mongoose.connect('mongodb://localhost/booklibrary');
 var db = mongoose.connection;
 
-app.get('/', function (req, res) {
-  res.send('Hello World');
-});
+// app.get('/', function (req, res) {
+//   res.send('Hello World');
+// });
 
 app.get('/about', function (req, res) {
   res.send('<h1>About page</h1>');
