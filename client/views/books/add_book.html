@@ -1,0 +1,73 @@
+<a class="btn btn-default" href="#/books">Go Back</a>
+<div class="row clearfix" >
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Add a Book</h3>
+    </div>
+    <div class="panel-body">
+      <form class="form-horizontal" ng-submit="addBook()">
+        <fieldset>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <label>Title</label>
+              <input type="text" class="form-control" ng-model="book.title" placeholder="Title">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="select" class="col-lg-2 control-label">Genres</label>
+            <div class="col-lg-10">
+              <select class="form-control" ng-model="book.genre">
+                <option>Suspense</option>
+                <option>Suspense</option>
+                <option>Programming</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <label>Author</label>
+              <input type="text" class="form-control" ng-model="book.author" placeholder="Author">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <label>Publisher</label>
+              <input type="text" class="form-control" ng-model="book.publisher" placeholder="Publisher">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <label>Pages</label>
+              <input type="text" class="form-control" ng-model="book.pages" placeholder="Pages">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <label>Description</label>
+              <textarea class="form-control" ng-model="book.description" placeholder="Description"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+            <label>Image URL</label>
+            <input type="text" class="form-control" ng-model="book.image_url" placeholder="Image URL">
+
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <label>Buy URL</label>
+              <input type="text" class="form-control" ng-model="book.buy_url" placeholder="Buy URL">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <a class="btn btn-default" href="#/books">Cancel</a>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
