@@ -1,19 +1,33 @@
 <a class="btn btn-default" href="#/books">Go Back</a>
-<div class="media" ng-init="getBook()">
-  <div class="media-left media-middle">
-    <a href="#">
-      <img class="media-object" src="{{book.image_url}}" alt="{{book.title}}">
-    </a>
-  </div>
-  <div class="media-body">
-    <h2 class="media-heading">{{book.title}}</h2>
-    <p>{{book.description}}</p>
-    <ul class="list-group">
-      <li class="list-group-item"><strong>Genre</strong>: {{book.genre}}</li>
-      <li class="list-group-item"><strong>author</strong>: {{book.author}}</li>
-      <li class="list-group-item"><strong>publisher</strong>: {{book.publisher}}</li>
-      <li class="list-group-item"><strong>pages</strong>: {{book.pages}}</li>
-      <br> <a class="btn btn-danger btn-lg" href="{{book.buy_url}}">Buy on Amazon</a>
-    </ul>
+<div class="row clearfix">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Books</h3>
+    </div>
+    <div class="panel-body">
+      <div class="media" ng-init="getBook()">
+        <div class="media-left media-middle">
+          <a href="#">
+            <img class="media-object" src="{{book.image_url}}" alt="{{book.title}}">
+          </a>
+        </div>
+        <div class="media-body">
+          <h2 class="media-heading">{{book.title}}</h2>
+          <p>{{book.description}}</p>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Genre</strong>: {{book.genre}}</li>
+            <li class="list-group-item"><strong>author</strong>: {{book.author}}</li>
+            <li class="list-group-item"><strong>publisher</strong>: {{book.publisher}}</li>
+            <li class="list-group-item"><strong>pages</strong>: {{book.pages}}</li>
+            <br>
+            <a class="btn btn-danger btn-lg" target="_blank" href="{{book.buy_url}}">Buy on Amazon</a>
+            <div class="pull-right">
+            <a class="btn btn-success btn-lg"  href="#/books/edit/{{book._id}}">EDIT</a>
+            <a class="btn btn-danger btn-lg"  ng-click="deleteBook()">DELETE</a>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

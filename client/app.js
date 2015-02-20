@@ -29,7 +29,7 @@ bookstore.config(function ($routeProvider) {
       controller: 'GenresController',
       templateUrl: 'views/genres/genres.html'
     })
-    .when('/books/add', {
+    .when('/genres/add', {
       controller: 'GenresController',
       templateUrl: 'views/genres/add_genre.html'
     })

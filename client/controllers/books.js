@@ -10,9 +10,34 @@ bookstore.controller('BooksController', function ($scope, $http, $location, $rou
   }
 
   $scope.getBook = function () {
-      var id = $routeParams.id;
-    $http.get('api/books/'+id).success(function (response) {
+    var id = $routeParams.id;
+    $http.get('/api/books/' + id).success(function (response) {
       $scope.book = response;
+    });
+  }
+
+  $scope.addBook = function () {
+    console.log($scope.book);
+    $http.post('/api/books/', $scope.book).success(function (response) {
+      window.location.href = '#/books'
+    });
+  }
+
+    // UPDATE
+    $scope.editBook = function () {
+    var id = $routeParams.id;
+    console.log($scope.book);
+    $http.put('/api/books/'+id, $scope.book).success(function (response) {
+      window.location.href = '#/books'
+    });
+  }
+
+    // DELETE
+    $scope.deleteBook = function () {
+    var id = $routeParams.id;
+    console.log($scope.book);
+    $http.delete('/api/books/'+id, $scope.book).success(function (response) {
+      window.location.href = '#/books'
     });
   }
 
