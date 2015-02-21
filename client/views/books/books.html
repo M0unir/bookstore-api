@@ -1,23 +1,26 @@
 <div class="jumbotron">
   <h1>Books</h1>
-  <p>List of books</p>
+  <p>Library counts <b>{{books.length}}</b> books total.</p>
   <p><a class="btn btn-primary btn-lg" href="#/books/add">Add more</a></p>
 </div>
+<hr>
 <div class="row clearfix" ng-init="getBooks()">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">Latest Books</h3>
-    </div>
-    <div class="panel-body">
-      <div ng-repeat="book in books">
-        <div class="col-sm-6 col-md-4 ">
-          <div class="thumbnail">
-            <img src="{{book.image_url}}" alt="{{book.title}}">
-            <div class="caption">
-              <h3>{{book.title}}</h3>
-              <p>{{book.description}}</p>
-              <p><a href="#/books/details/{{book._id}}" class="btn btn-primary" role="button">Details</a> <a href="{{book.buy_url}}"
-                  class="btn btn-default" role="button">Buy</a></p>
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Latest Books</h3>
+      </div>
+      <div class="panel-body">
+        <div ng-repeat="book in books">
+          <div class="col-sm-6 col-md-4 ">
+            <div class="thumbnail">
+              <img src="{{book.image_url}}" alt="{{book.title}}">
+              <div class="caption">
+                <h3>{{book.title}}</h3>
+                <p>{{book.description}}</p>
+                <p><a href="#/books/details/{{book._id}}" class="btn btn-primary" role="button">Details</a> <a href="{{book.buy_url}}"
+                    class="btn btn-default" role="button">Buy</a></p>
+              </div>
             </div>
           </div>
         </div>
