@@ -1,6 +1,20 @@
-
-  <div class="jumbotron">
-    <h1>Genres</h1>
-    <p>List of genres</p>
-    <p><a class="btn btn-primary btn-lg" href="#/genres/add">Add more</a></p>
+<div class="jumbotron">
+  <h1>Genres</h1>
+  <p>List of genres</p>
+  <p><a class="btn btn-primary btn-lg" href="#/genres/add">Add more</a></p>
+</div>
+<div class="row clearfix" ng-init="getGenres()">
+  <div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">All genres</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        <a ng-repeat="genre in genres" href="#/genres/{{genre._id}}" class="btn btn-primary btn-genre" role="button">{{genre.name}}</a>
+      </p>
+    </div>
   </div>
+  </div>
+
+</div>

@@ -2,10 +2,17 @@ var bookstore = angular.module('bookstore', ['ngRoute']);
 
 bookstore.config(function ($routeProvider) {
   $routeProvider
+
+    // PAGES
     .when('/', {
       controller: 'BooksController',
-      templateUrl: 'views/books/books.html'
+      templateUrl: 'views/pages/home.html'
     })
+    .when('/about', {
+      templateUrl: 'views/pages/about.html'
+    })
+
+    // BOOKS
     .when('/books', {
       controller: 'BooksController',
       templateUrl: 'views/books/books.html'
@@ -23,11 +30,14 @@ bookstore.config(function ($routeProvider) {
       templateUrl: 'views/books/edit_book.html'
     })
 
-    //Genres
-
+    // GENRES
     .when('/genres', {
       controller: 'GenresController',
       templateUrl: 'views/genres/genres.html'
+    })
+    .when('/genres/:id', {
+      controller: 'GenresController',
+      templateUrl: 'views/genres/genre_details.html'
     })
     .when('/genres/add', {
       controller: 'GenresController',
