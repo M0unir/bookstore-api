@@ -23,26 +23,26 @@ $scope.getGenres = function(){
   $scope.addGenre = function () {
     console.log($scope.genre);
     $http.post('/api/genres/', $scope.genre).success(function (response) {
-      window.location.href = '#/genres'
+      window.location.href = '#/genres';
     });
   }
 
-//   // UPDATE
-//   $scope.editBook = function () {
-//     var id = $routeParams.id;
-//     console.log($scope.book);
-//     $http.put('/api/books/' + id, $scope.book).success(function (response) {
-//       window.location.href = '#/books'
-//     });
-//   }
+  // UPDATE
+  $scope.editGenre = function () {
+    var id = $routeParams.id;
+    console.log($scope.genre);
+    $http.put('/api/genres/' + id, $scope.genre).success(function (response) {
+      window.location.href = '#/genres/details/'+ id
+    });
+  }
 
-//   // DELETE
-//   $scope.deleteBook = function () {
-//     var id = $routeParams.id;
-//     console.log($scope.book);
-//     $http.delete('/api/books/' + id, $scope.book).success(function (response) {
-//       window.location.href = '#/books'
-//     });
-//   }
+  // DELETE
+  $scope.deleteGenre = function () {
+    var id = $routeParams.id;
+    console.log($scope.genre);
+    $http.delete('/api/genres/' + id, $scope.genre).success(function (response) {
+      window.location.href = '#/genres'
+    });
+  }
 
 })
