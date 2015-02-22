@@ -1,13 +1,12 @@
-<a class="btn btn-default" href="#/genres">Go Back</a>
-<hr>
-<div class="row clearfix">
+<a class="btn btn-default" href="#/books">Go Back</a>
+<div class="row clearfix" ng-init="getGenre()">
   <div class="container">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Add a Genre</h3>
+        <h3 class="panel-title">Edit Genre</h3>
       </div>
       <div class="panel-body">
-        <form class="form-horizontal" ng-submit="addGenre()">
+        <form class="form-horizontal" ng-submit="editGenre()">
           <fieldset>
             <div class="form-group">
               <div class="col-lg-10 col-lg-offset-2">
@@ -17,13 +16,13 @@
             </div>
             <div class="form-group">
               <div class="col-lg-10 col-lg-offset-2">
-                <a class="btn btn-default" href="#/genres">Cancel</a>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </div>
           </fieldset>
         </form>
       </div>
+
     </div>
   </div>
 </div>
