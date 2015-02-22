@@ -1,6 +1,7 @@
 var bookstore = angular.module('bookstore');
 
 bookstore.controller('BooksController', function ($scope, $http, $location, $routeParams, BookService) {
+  
   $scope.getBooks = function () {
     BookService.getBooks()
       .then(function (response) {
