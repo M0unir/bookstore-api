@@ -1,8 +1,8 @@
 # Bookstore
-Simple REST API using the MEAN Stack
+Simple REST API built with the MEAN Stack
 
 #Technologies
-Node
+Node 
 Mongodb
 Express
 Angularjs
@@ -10,11 +10,11 @@ Angularjs
 #How to run
 Clone repo
  ``` shell
- npm install && bower install
+ git clone https://github.com/M0unir/Bookstore.git
  ```
 Install dependencies
  ``` shell
- npm install && bower install
+ npm install && cd client && bower install
  ```
 Run app
 ```shell
