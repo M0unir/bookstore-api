@@ -3,18 +3,18 @@
   <p>Library counts <b>{{genres.length}}</b> genres total.</p>
   <p><a class="btn btn-primary btn-lg" href="#/genres/add">Add more</a></p>
 </div>
+<hr>
 <div class="row clearfix" ng-init="getGenres()">
   <div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">All genres</h3>
-    </div>
-    <div class="panel-body">
-      <p>
-        <a ng-repeat="genre in genres" href="#/genres/details/{{genre._id}}" class="btn btn-warning btn-genre" role="button">{{genre.name}}</a>
-      </p>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">All genres</h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <a ng-repeat="genre in genres" href="#/genres/details/{{genre._id}}" class="btn btn-warning btn-genre" role="button">{{genre.name}}</a>
+        </p>
+      </div>
     </div>
   </div>
-  </div>
-
 </div>
