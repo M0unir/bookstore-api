@@ -21,10 +21,9 @@ var db = mongoose.connection;
 //   res.send('Hello World');
 // });
 
-app.get('/about', function (req, res) {
-  res.send('<h1>About page</h1>');
-
-});
+// app.get('/about', function (req, res) {
+//   res.send('<h1>About page</h1>');
+// });
 
 app.get('/contact', function (req, res) {
   res.send('Contact Page');
@@ -106,15 +105,16 @@ app.get('/api/books/:_id', function(req,res){
 });
 
 // POST book
-app.post('/api/books', function(req,res){
-    var book = req.body;
-    Book.addBook(book, function(err, book){
-        if(err){
-            throw err;
-        }
-        res.json(book);
-    });
+app.post('/api/books', function(req, res){
+	var book = req.body;
+	Book.addBook(book, function(err, book){
+		if(err){
+			throw err;
+		}
+		res.json(book);
+	});
 });
+
 
 // UPDATE book
 app.put('/api/books/:_id', function(req,res){
