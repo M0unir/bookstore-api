@@ -3,3 +3,4 @@ node_modules/
 .vscode/
 client/bower_components/
 .eslintrcc
+npm-debug.log
