@@ -7,7 +7,7 @@ Mongodb
 Express
 Angularjs
 
-#How to run
+# How to run
 Clone repo
  ``` shell
  git clone https://github.com/M0unir/Bookstore.git
@@ -21,5 +21,5 @@ Run app
 npm start
 ```
 
-#License
+# License
 MIT License
